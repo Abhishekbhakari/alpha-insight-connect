@@ -8,6 +8,8 @@ import Recommendations from "./pages/Recommendations";
 import Customers from "./pages/Customers";
 import Calls from "./pages/Calls";
 import Settings from "./pages/Settings";
+import Reports from "./pages/Reports";
+import Retention from "./pages/Retention";
 import CreateRecommendation from "./pages/CreateRecommendation";
 import AddCustomer from "./pages/AddCustomer";
 import RecommendationDetails from "./pages/RecommendationDetails";
@@ -19,6 +21,7 @@ import CustomerLogin from "./pages/customer/CustomerLogin";
 import CustomerDashboard from "./pages/customer/CustomerDashboard";
 import CustomerHoldings from "./pages/customer/CustomerHoldings";
 import CustomerHistory from "./pages/customer/CustomerHistory";
+import ShadowPortfolio from "./pages/customer/ShadowPortfolio";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -44,12 +47,14 @@ const App = () => (
           <Route path="/customers/add" element={<AddCustomer />} />
           <Route path="/customers/:id" element={<CustomerProfile />} />
           <Route path="/calls" element={<Calls />} />
+          <Route path="/reports" element={<Reports />} />
+          <Route path="/retention" element={<Retention />} />
           <Route path="/settings" element={<Settings />} />
           
           {/* Customer Portal Routes */}
           <Route path="/customer/login" element={<CustomerLogin />} />
           <Route path="/customer/dashboard" element={<CustomerDashboard />} />
-          <Route path="/customer/holdings" element={<CustomerHoldings />} />
+          <Route path="/customer/holdings" element={<ShadowPortfolio />} />
           <Route path="/customer/history" element={<CustomerHistory />} />
           
           <Route path="*" element={<NotFound />} />
