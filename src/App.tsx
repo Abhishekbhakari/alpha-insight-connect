@@ -5,11 +5,10 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Dashboard from "./pages/Dashboard";
 import Recommendations from "./pages/Recommendations";
-import Customers from "./pages/Customers";
-import Calls from "./pages/Calls";
-import Settings from "./pages/Settings";
+import Clients from "./pages/Clients";
+import Portfolio from "./pages/Portfolio";
 import Reports from "./pages/Reports";
-import Retention from "./pages/Retention";
+import Settings from "./pages/Settings";
 import CreateRecommendation from "./pages/CreateRecommendation";
 import AddCustomer from "./pages/AddCustomer";
 import RecommendationDetails from "./pages/RecommendationDetails";
@@ -33,30 +32,29 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          {/* Auth Routes */}
+          {/* Auth */}
           <Route path="/auth/login" element={<AnalystLogin />} />
           <Route path="/auth/forgot-password" element={<ForgotPassword />} />
           <Route path="/auth/setup" element={<FirstTimeSetup />} />
-          
-          {/* Analyst Routes */}
+
+          {/* Analyst */}
           <Route path="/" element={<Dashboard />} />
+          <Route path="/clients" element={<Clients />} />
+          <Route path="/clients/add" element={<AddCustomer />} />
+          <Route path="/clients/:id" element={<CustomerProfile />} />
           <Route path="/recommendations" element={<Recommendations />} />
           <Route path="/recommendations/create" element={<CreateRecommendation />} />
           <Route path="/recommendations/:id" element={<RecommendationDetails />} />
-          <Route path="/customers" element={<Customers />} />
-          <Route path="/customers/add" element={<AddCustomer />} />
-          <Route path="/customers/:id" element={<CustomerProfile />} />
-          <Route path="/calls" element={<Calls />} />
+          <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/reports" element={<Reports />} />
-          <Route path="/retention" element={<Retention />} />
           <Route path="/settings" element={<Settings />} />
-          
-          {/* Customer Portal Routes */}
+
+          {/* Customer Portal */}
           <Route path="/customer/login" element={<CustomerLogin />} />
           <Route path="/customer/dashboard" element={<CustomerDashboard />} />
           <Route path="/customer/holdings" element={<ShadowPortfolio />} />
           <Route path="/customer/history" element={<CustomerHistory />} />
-          
+
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

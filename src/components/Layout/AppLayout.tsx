@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
-import { Sidebar } from "./Sidebar";
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import { AppSidebar } from "./AppSidebar";
 
 interface AppLayoutProps {
   children: ReactNode;
@@ -7,11 +8,19 @@ interface AppLayoutProps {
 
 export const AppLayout = ({ children }: AppLayoutProps) => {
   return (
-    <div className="flex min-h-screen w-full bg-background">
-      <Sidebar />
-      <main className="flex-1 overflow-auto">
-        {children}
-      </main>
-    </div>
+    <SidebarProvider>
+      <div className="min-h-screen flex w-full bg-background">
+        <AppSidebar />
+        <div className="flex-1 flex flex-col min-w-0">
+          <header className="h-14 flex items-center border-b bg-card px-4 shrink-0">
+            <SidebarTrigger className="mr-4" />
+            <span className="text-sm text-muted-foreground">Smart-Nudge PMS Platform</span>
+          </header>
+          <main className="flex-1 overflow-auto">
+            {children}
+          </main>
+        </div>
+      </div>
+    </SidebarProvider>
   );
 };

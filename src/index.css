@@ -2,44 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
-    /* FinTech Professional Theme */
-    --background: 0 0% 98%;
-    --foreground: 222 47% 11%;
+    /* Deep Royal Blue & Emerald Green Theme */
+    --background: 210 20% 98%;
+    --foreground: 224 71% 13%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
+    --card-foreground: 224 71% 13%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
+    --popover-foreground: 224 71% 13%;
 
-    /* Professional Blue - Main Brand */
-    --primary: 217 91% 60%;
+    /* Deep Royal Blue */
+    --primary: 224 76% 33%;
     --primary-foreground: 0 0% 100%;
-    --primary-light: 217 91% 95%;
-    --primary-dark: 217 91% 45%;
+    --primary-light: 224 76% 95%;
+    --primary-dark: 224 76% 25%;
 
-    /* Subtle Secondary */
-    --secondary: 214 32% 96%;
-    --secondary-foreground: 222 47% 11%;
+    --secondary: 210 20% 96%;
+    --secondary-foreground: 224 71% 13%;
 
-    /* Muted Backgrounds */
-    --muted: 214 32% 95%;
-    --muted-foreground: 220 9% 46%;
+    --muted: 210 20% 95%;
+    --muted-foreground: 215 16% 47%;
 
-    /* Accent for Highlights */
-    --accent: 217 91% 95%;
-    --accent-foreground: 217 91% 40%;
+    --accent: 224 76% 95%;
+    --accent-foreground: 224 76% 33%;
 
-    /* Status Colors */
-    --success: 142 71% 45%;
+    /* Emerald Green */
+    --success: 160 84% 39%;
     --success-foreground: 0 0% 100%;
-    --success-light: 142 71% 96%;
+    --success-light: 160 84% 95%;
 
     --warning: 38 92% 50%;
     --warning-foreground: 0 0% 100%;
@@ -53,31 +46,26 @@ All colors MUST be HSL.
     --info-foreground: 0 0% 100%;
     --info-light: 199 89% 96%;
 
-    /* Borders & Inputs */
     --border: 214 32% 88%;
     --input: 214 32% 91%;
-    --ring: 217 91% 60%;
+    --ring: 224 76% 33%;
 
     --radius: 0.5rem;
 
-    /* Sidebar */
-    --sidebar-background: 0 0% 100%;
-    --sidebar-foreground: 222 47% 11%;
-    --sidebar-primary: 217 91% 60%;
+    /* Sidebar - Dark Royal Blue */
+    --sidebar-background: 224 76% 15%;
+    --sidebar-foreground: 210 20% 90%;
+    --sidebar-primary: 160 84% 45%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 217 91% 95%;
-    --sidebar-accent-foreground: 217 91% 40%;
-    --sidebar-border: 214 32% 88%;
-    --sidebar-ring: 217 91% 60%;
+    --sidebar-accent: 224 60% 22%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 224 60% 22%;
+    --sidebar-ring: 160 84% 45%;
 
-    /* Shadows */
     --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
     --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
     --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
     --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
-
-    /* Transitions */
-    --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 
@@ -85,7 +73,6 @@ All colors MUST be HSL.
   * {
     @apply border-border;
   }
-
   body {
     @apply bg-background text-foreground;
   }
