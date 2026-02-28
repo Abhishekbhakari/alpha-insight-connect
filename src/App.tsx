@@ -21,6 +21,8 @@ import CustomerDashboard from "./pages/customer/CustomerDashboard";
 import CustomerHoldings from "./pages/customer/CustomerHoldings";
 import CustomerHistory from "./pages/customer/CustomerHistory";
 import ShadowPortfolio from "./pages/customer/ShadowPortfolio";
+import Onboarding from "./pages/Onboarding";
+import Logs from "./pages/Logs";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -48,6 +50,8 @@ const App = () => (
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/reports" element={<Reports />} />
           <Route path="/settings" element={<Settings />} />
+          <Route path="/onboarding" element={<Onboarding />} />
+          <Route path="/logs" element={<Logs />} />
 
           {/* Customer Portal */}
           <Route path="/customer/login" element={<CustomerLogin />} />
