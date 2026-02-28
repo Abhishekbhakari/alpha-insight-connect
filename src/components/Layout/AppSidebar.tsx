@@ -5,6 +5,8 @@ import {
   Briefcase,
   BarChart3,
   Settings,
+  FileSignature,
+  ScrollText,
 } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import { useLocation } from "react-router-dom";
@@ -26,6 +28,8 @@ const navigation = [
   { title: "Recommendations", url: "/recommendations", icon: TrendingUp },
   { title: "Shadow Portfolios", url: "/portfolio", icon: Briefcase },
   { title: "Reports", url: "/reports", icon: BarChart3 },
+  { title: "Onboarding", url: "/onboarding", icon: FileSignature },
+  { title: "Logs", url: "/logs", icon: ScrollText },
   { title: "Settings", url: "/settings", icon: Settings },
 ];
 
